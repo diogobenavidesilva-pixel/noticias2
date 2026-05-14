@@ -5,9 +5,19 @@
 }
 
 :root {
-    --primary-color: #ffffff;
-    /* --secondary-color: #345840; */
+    --primary-color: #51006c;
+    background-color: rgb(0, 0, 0);
     --text-color: #000000;
+}
+
+.escuro {
+    --primary-color: #51006c;
+    background-color: rgb(0, 0, 0);
+    --text-color: #000000;
+    
+    --primary-color: #ffffff;
+     background-color: rgb(255, 255, 255);    
+    --text-color: #18006d;    
 }
 
  body {
@@ -15,7 +25,6 @@
     color: var(--text-color);
      font-family: Arial, sans-serif;
  }
-
 
 
 
@@ -31,6 +40,41 @@ header {
     justify-content: center; /* Alinhamento horizontal */
     background-color:var(--primary-color);
 } 
+
+header button {
+    position : absolute;
+    top: 25px;
+    right: 25px;
+
+    padding: 2vw;
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+    background-color: var(--text-color);
+
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+header button:hover {
+    padding: 1.5vw;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--primary-color);
+}
+
+header button:active {
+    border: 2px solid var(--text-color);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    
+}
+
+
+header img {
+    width: 100px;
+    height: auto;
+}
 
 
 header h1 {
@@ -60,3 +104,5 @@ header h1 {
     color: var(--text-color);
     margin-bottom: 10px;
 }
+
+
