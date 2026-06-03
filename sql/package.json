@@ -1,0 +1,24 @@
+{
+  "name": "noticias2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "start": "node ./js/server.js",
+      "restart": "nodemon ./js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogobenavidesilva-pixel/noticias2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diogobenavidesilva-pixel/noticias2/issues"
+  },
+  "homepage": "https://github.com/diogobenavidesilva-pixel/noticias2#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

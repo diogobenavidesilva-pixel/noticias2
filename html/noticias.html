@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <style>
+        /* 1. Variáveis de Cores (Tema Claro como padrão) */
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #000000;
+            --header-bg: #fff9f9;
+            --header-text: #000000;
+            --card-bg: #ffffff;
+        }
+
+        /* 2. Cores do Tema Escuro */
+        body.dark-mode {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --header-bg: #000000;
+            --header-text: #ffffff;
+            --card-bg: #000000;
+        }
+
+        /* 3. Estilos Gerais */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .noticia {
+            background-color: var(--card-bg);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgb(0, 0, 0);
+        }
+
+        #toggle-tema {
+            background: none;
+            border: 2px solid var(--header-text);
+            color: var(--header-text);
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portal de Notícias</h1>
+        <button id="toggle-tema">🌙 Modo Escuro</button>
+    </header>
+
+    <div class="container">
+        <article class="noticia">
+            <h2>Última Hora: Principais atualizações do dia</h2>
+            
+        </article>
+    </div>
+
+    <script>
+        // 4. Lógica JavaScript para mudar o tema
+        const botaoTema = document.getElementById('toggle-tema');
+        const corpo = document.body;
+
+        // Verifica se o usuário já tinha um tema salvo anteriormente
+        if (localStorage.getItem('tema') === 'escuro') {
+            corpo.classList.add('dark-mode');
+            botaoTema.textContent = '☀️ Modo Claro';
+        }
+
+        botaoTema.addEventListener('click', () => {
+            corpo.classList.toggle('dark-mode');
+
+            // Alterna o texto do botão
+            if (corpo.classList.contains('dark-mode')) {
+                botaoTema.textContent = '☀️ Modo Claro';
+                localStorage.setItem('tema', 'escuro'); // Salva a preferência
+            } else {
+                botaoTema.textContent = '🌙 Modo Escuro';
+                localStorage.setItem('tema', 'claro'); 
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+    <title>Notícias Web</title>   
+    <link rel="shortcut icon" href="../img/News.jpg" type="image/x-icon">
+    <h1 onclick="mudar_titulo(this)">Noticias Web</h1>
+    
+</head> 
+<body class="escuro" onload ="exibir_noticias()">
+    
+    <script>
+          
+        function alterar_Tema() {
+        document.body.classList.toggle("escuro");
+        } 
+        
+        function abrir_lightbox(element) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            lightbox.style.display = "block";
+            lightboxImg.src = element.src;
+        }
+        function alterar_Tema() {
+            document.body.classList.toggle("escuro");
+        } 
+
+         function fecharlightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+            
+    </script>
+
+    <header>    
+        <img src="../img/Designer-UI.jpg" onclick="abrir_lightbox(this)" alt="noticia1" class="noticia1">
+        <h2>
+            Últimas Notícias
+        </h2>            
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><nav></nav>
+        <main id="noticias-container">
+    <!-- As notícias serão carregadas aqui via JavaScript -->
+    </main>
+    <section Class="noticias">
+        <article class="noticia">
+            <img src="../img/Noticia.jpg" onclick=" abrir_lightbox(this)" alt="noticia1" class="noticia1">
+            <h2>Notícia</h2>    
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed at ligula a nunc efficitur commodo. Sed at ligula a nunc efficitur commodo.</p>
+        </article>
+        <article class="noticia">
+            <img src="../img/Noticia.jpg" onclick="abrir_lightbox(this)" alt="noticia2" class="noticia2">
+            <h2>Notícia 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed at ligula a nunc efficitur commodo. Sed at ligula a nunc efficitur commodo.</p>
+        </article>
+        <article class="noticia">
+            <img src="../img/Noticia.jpg" onclick="abrir_lightbox(this)" alt="noticia3" class="noticia3">
+            <h2>Notícia 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed at ligula a nunc efficitur commodo. Sed at ligula a nunc efficitur commodo.</p>
+            <a href="#" class="btn">Ler mais</a>
+        
+        <article class="noticia">
+            <img src="../img/Noticia.jpg" onclick="abrir_lightbox(this)" alt="noticia4" class="noticia4">
+            <h2>Notícia 4</h2>
+            <img src="../img/Noticia.jpg" onclick="abrir_lightbox(this)" alt="noticia4" class="noticia4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur commodo. Sed at ligula a nunc efficitur commodo. Sed at ligula a nunc efficitur commodo.</p>
+             <a href="#" class="btn">Ler mais</a>
+        </article>
+        <section></section>
+        <div class="lightbox" id="lightbox" onclick="fecharlightbox()">
+            <span class="fechar">&times;</span>
+        </div>
+                                  
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+server.js
+import express from 'express';

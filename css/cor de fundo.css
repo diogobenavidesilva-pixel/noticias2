@@ -1,0 +1,10 @@
+body {
+    background-color: blue; /* Altera o fundo da página inteira para azul */
+}
+
+.minha-div {
+    background-color: #000000; /* Altera o fundo de uma classe específica para vermelho */
+}
+#meu-id {
+    background-color: #000000; /* Altera o fundo de um elemento específico para verde */
+}
