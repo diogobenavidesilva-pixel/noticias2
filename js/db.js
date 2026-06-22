@@ -2,17 +2,17 @@ import mysql from 'mysql2/promise.js';
 
 async function conectar() {
     const conexao = await mysql.createConnection({
-        host: '127.0.0.1',
-        port: 3306,
-        user: 'root', 
-        password: '',
-        database: 'noticiario'
+        host: process.env.DB_HOST || 'localhost',
+        port: process.env.DB_PORT || '14113',
+        user: process.env.DB_USER || 'root',
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
     });
 
     return conexao;
 }
 
-async function executarQuery(query, params=[]) {
+    async function executarQuery(query, params=[]) {
      const conexao = await conectar();
 
     try {
@@ -27,5 +27,4 @@ async function executarQuery(query, params=[]) {
         await conexao.end();
     }    
 }
-
-export default executarQuery;
+    export { executarQuery };

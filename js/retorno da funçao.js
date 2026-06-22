@@ -25,5 +25,3 @@ console.log(resultado5);
 let resultado6 = divisao(20, 5);
 
 console.log(resultado6);
-
-let

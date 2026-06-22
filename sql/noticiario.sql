@@ -28,3 +28,6 @@ SELECT
 FROM 
     noticias;
 
+DELETE FROM noticias;
+WHERE id = 1;
+
