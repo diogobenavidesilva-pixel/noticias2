@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-     "start": "node ./js/server.js",
-      "restart": "nodemon ./js/server.js"
+    "start": "node --watch ./js/server.js"     
   },
   "repository": {
     "type": "git",

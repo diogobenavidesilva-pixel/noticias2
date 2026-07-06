@@ -1,0 +1,342 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogos Grátis</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#111;
+    color:white;
+}
+
+header{
+    background:#00a651;
+    padding:20px;
+    text-align:center;
+}
+
+h1{
+    margin:0;
+}
+
+.container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:30px;
+}
+
+.card{
+    background:#222;
+    width:300px;
+    margin:15px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,.5);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h2{
+    text-align:center;
+}
+
+.card p{
+    padding:15px;
+}
+
+.card a{
+    display:block;
+    background:#00a651;
+    color:white;
+    text-align:center;
+    padding:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    background:#008d45;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>🎮 Jogos Gratuitos</h1>
+<p>Baixe jogos gratuitos em sites oficiais.</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<img src="https://picsum.photos/400/200?random=1">
+<h2>Steam</h2>
+<p>Encontre centenas de jogos gratuitos para PC.</p>
+<a href="https://store.steampowered.com/genre/Free%20to%20Play/" target="_blank">
+Acessar
+</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/200?random=2">
+<h2>Epic Games</h2>
+<p>Receba jogos grátis todas as semanas.</p>
+<a href="https://store.epicgames.com/" target="_blank">
+Acessar
+</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/200?random=3">
+<h2>itch.io</h2>
+<p>Jogos independentes gratuitos.</p>
+<a href="https://itch.io/games/free" target="_blank">
+Acessar
+</a>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/200?random=4">
+<h2>GOG</h2>
+<p>Jogos gratuitos e clássicos para PC.</p>
+<a href="https://www.gog.com/" target="_blank">
+Acessar
+</a>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 - Jogos Grátis | Desenvolvido em HTML + CSS</p>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Games Store</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#111827;
+color:#fff;
+}
+
+header{
+background:#1f2937;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+color:#00ff99;
+}
+
+header p{
+margin-top:10px;
+color:#ddd;
+}
+
+.menu{
+margin-top:20px;
+}
+
+.menu input{
+width:80%;
+max-width:500px;
+padding:12px;
+border:none;
+border-radius:30px;
+font-size:16px;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.card{
+background:#1f2937;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h2{
+padding:15px;
+color:#00ff99;
+}
+
+.card p{
+padding:0 15px 15px;
+color:#ddd;
+}
+
+.card button{
+width:100%;
+padding:15px;
+border:none;
+background:#00c853;
+color:#fff;
+font-size:18px;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#00a844;
+}
+
+footer{
+background:#1f2937;
+text-align:center;
+padding:20px;
+margin-top:20px;
+color:#bbb;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h1>🎮 Mobile Games Store</h1>
+
+<p>Os melhores jogos para Android e iPhone.</p>
+
+<div class="menu">
+<input type="text" id="pesquisa" placeholder="Pesquisar jogo...">
+</div>
+
+</header>
+
+<section class="container" id="listaJogos">
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=1">
+<h2>Battle Arena</h2>
+<p>Jogo de ação online com batalhas em tempo real.</p>
+<button onclick="jogar('Battle Arena')">Jogar</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=2">
+<h2>Speed Racing</h2>
+<p>Corridas incríveis com gráficos em HD.</p>
+<button onclick="jogar('Speed Racing')">Jogar</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=3">
+<h2>Zombie Survival</h2>
+<p>Sobreviva ao apocalipse zumbi.</p>
+<button onclick="jogar('Zombie Survival')">Jogar</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=4">
+<h2>Puzzle Master</h2>
+<p>Resolva centenas de desafios divertidos.</p>
+<button onclick="jogar('Puzzle Master')">Jogar</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=5">
+<h2>Football League</h2>
+<p>Monte seu time e dispute campeonatos.</p>
+<button onclick="jogar('Football League')">Jogar</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/400/300?random=6">
+<h2>Fantasy RPG</h2>
+<p>Explore mundos mágicos e enfrente monstros.</p>
+<button onclick="jogar('Fantasy RPG')">Jogar</button>
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Mobile Games Store</p>
+
+</footer>
+
+<script>
+
+function jogar(nome){
+alert("Você escolheu: " + nome);
+}
+
+const pesquisa=document.getElementById("pesquisa");
+
+pesquisa.addEventListener("keyup",function(){
+
+let filtro=pesquisa.value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let titulo=card.querySelector("h2").innerText.toLowerCase();
+
+if(titulo.indexOf(filtro)>-1){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
